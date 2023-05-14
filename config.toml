@@ -1,0 +1,28 @@
+theme = "adwaita-dark"
+
+[editor]
+line-number = "relative"
+completion-replace = true
+cursorline = true
+color-modes = true
+
+[editor.statusline]
+center = ["version-control"]
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[keys.normal]
+C-s = ":w"
