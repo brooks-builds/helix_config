@@ -29,10 +29,3 @@ name = "typescript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 file-types = ["ts"]
-
-[[language]]
-name = "markdown"
-scope = "text.markdown"
-config.check.command = "markdownlint-cli2"
-auto-format = true
-file-types = ["md"]

@@ -23,3 +23,12 @@ enable = true
 
 [editor.gutters.line-numbers]
 min-width = 1
+
+[editor.whitespace]
+render = "all"
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
