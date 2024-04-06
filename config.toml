@@ -5,6 +5,7 @@ line-number = "relative"
 completion-replace = true
 cursorline = true
 color-modes = true
+bufferline = "multiple"
 
 [editor.statusline]
 center = ["version-control"]
