@@ -6,12 +6,14 @@ completion-replace = true
 cursorline = true
 color-modes = true
 bufferline = "multiple"
+end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 center = ["version-control"]
 
 [editor.lsp]
 display-inlay-hints = true
+snippets = false
 
 [editor.cursor-shape]
 insert = "bar"
@@ -33,3 +35,5 @@ render = true
 character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
+[editor.inline-diagnostics]
+cursor-line = "error"
