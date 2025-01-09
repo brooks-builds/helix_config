@@ -37,3 +37,7 @@ skip-levels = 1
 
 [editor.inline-diagnostics]
 cursor-line = "error"
+
+[keys.normal]
+C-r = ":rl" # reload the buffer from disk
+
