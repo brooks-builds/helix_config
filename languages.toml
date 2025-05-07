@@ -1,6 +1,39 @@
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+
 [[language]]
 name = "typescript"
 language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] } ]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
+[[language]]
+name = "javascript"
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] } ]
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "rust"
+
+[language-server.rust-analyzer]
+config = { procMacro = { ignored = { leptos_macro = [
+    # Optional:
+    # "component",
+    "server"
+] } } }
+
+[[language]]
+name = "markdown"
+soft-wrap.enable = true
+text-width = 80
+soft-wrap.wrap-at-text-width = true
+language-servers = ["marksman", "markdown-oxide", "harper-ls"]
+formatter = { command = 'prettier', args = [
+  "--parser",
+  "markdown",
+  "--prose-wrap",
+  "never", # <always|never|preserve>
+] }
+auto-format = true
