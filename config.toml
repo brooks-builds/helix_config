@@ -43,7 +43,9 @@ cursor-line = "error"
 C-r = ":rl" # reload the buffer from disk
 
 [keys.normal.space.t]
-z = ":toggle gutters.line-numbers.min-width 63 3"
+z = ":toggle gutters.line-numbers.min-width 110 3"
+s = ":toggle auto-save.after-delay.enable"
 
 [keys.normal.space.e]
 z = ":w"
+

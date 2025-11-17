@@ -2,15 +2,30 @@
 command = "harper-ls"
 args = ["--stdio"]
 
-[[language]]
-name = "typescript"
-language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] } ]
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
+[language-server.vscode-eslint-language-server]
+command = "vscode-eslint-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-eslint-language-server.config]
+validate = "on"
+experimental = { useFlatConfig = false }
+rulesCustomizations = []
+run = "onType"
+problems = { shortenToSingleLine = false }
+nodePath = ""
+
+[language-server.vscode-eslint-language-server.config.codeAction.disableRuleComment]
+enable = true
+location = "separateLine"
+
+[language-server.vscode-eslint-language-server.config.codeAction.showDocumentation]
+enable = true
+
+[language-server.vscode-eslint-language-server.config.workingDirectory]
+mode = "location"
 
 [[language]]
-name = "javascript"
-language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] } ]
+name = "typescript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
@@ -37,3 +52,4 @@ formatter = { command = 'prettier', args = [
   "never", # <always|never|preserve>
 ] }
 auto-format = true
+
