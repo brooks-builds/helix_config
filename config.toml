@@ -41,6 +41,7 @@ cursor-line = "error"
 
 [keys.normal]
 C-r = ":rl" # reload the buffer from disk
+X = "select_line_above" # Allows for 'undoing' the select line (x) command
 
 [keys.normal.space.t]
 z = ":toggle gutters.line-numbers.min-width 110 3"
