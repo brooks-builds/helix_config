@@ -38,6 +38,7 @@ config = { procMacro = { ignored = { leptos_macro = [
     # "component",
     "server"
 ] } } }
+check = { command = "clippy" }
 
 [[language]]
 name = "markdown"
