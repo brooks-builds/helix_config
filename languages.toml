@@ -1,56 +1,61 @@
-[language-server.harper-ls]
-command = "harper-ls"
-args = ["--stdio"]
+# [[language]]
+# name = "rust"
 
-[language-server.vscode-eslint-language-server]
-command = "vscode-eslint-language-server"
-args = ["--stdio"]
+# [language-server.rust-analyzer]
+# config = { procMacro = { ignored = { leptos_macro = [
+#     # Optional:
+#     # "component",
+#     "server"
+# ] } } }
+# check = { command = "clippy" }
 
-[language-server.vscode-eslint-language-server.config]
-validate = "on"
-experimental = { useFlatConfig = false }
-rulesCustomizations = []
-run = "onType"
-problems = { shortenToSingleLine = false }
-nodePath = ""
+# [language-server.harper-ls]
+# command = "harper-ls"
+# args = ["--stdio"]
 
-[language-server.vscode-eslint-language-server.config.codeAction.disableRuleComment]
-enable = true
-location = "separateLine"
+# [language-server.vscode-eslint-language-server]
+# command = "vscode-eslint-language-server"
+# args = ["--stdio"]
 
-[language-server.vscode-eslint-language-server.config.codeAction.showDocumentation]
-enable = true
+# [language-server.vscode-eslint-language-server.config]
+# validate = "on"
+# experimental = { useFlatConfig = false }
+# rulesCustomizations = []
+# run = "onType"
+# problems = { shortenToSingleLine = false }
+# nodePath = ""
 
-[language-server.vscode-eslint-language-server.config.workingDirectory]
-mode = "location"
+# [language-server.vscode-eslint-language-server.config.codeAction.disableRuleComment]
+# enable = true
+# location = "separateLine"
 
-[[language]]
-name = "typescript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
+# [language-server.vscode-eslint-language-server.config.codeAction.showDocumentation]
+# enable = true
+
+# [language-server.vscode-eslint-language-server.config.workingDirectory]
+# mode = "location"
+
+# [[language]]
+# name = "typescript"
+# formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+# auto-format = true
+
+# [[language]]
+# name = "markdown"
+# soft-wrap.enable = true
+# text-width = 80
+# soft-wrap.wrap-at-text-width = true
+# language-servers = ["marksman", "markdown-oxide", "harper-ls"]
+# formatter = { command = 'prettier', args = [
+#   "--parser",
+#   "markdown",
+#   "--prose-wrap",
+#   "never", # <always|never|preserve>
+# ] }
+# auto-format = true
 
 [[language]]
 name = "rust"
-
-[language-server.rust-analyzer]
-config = { procMacro = { ignored = { leptos_macro = [
-    # Optional:
-    # "component",
-    "server"
-] } } }
-check = { command = "clippy" }
-
-[[language]]
-name = "markdown"
-soft-wrap.enable = true
-text-width = 80
-soft-wrap.wrap-at-text-width = true
-language-servers = ["marksman", "markdown-oxide", "harper-ls"]
-formatter = { command = 'prettier', args = [
-  "--parser",
-  "markdown",
-  "--prose-wrap",
-  "never", # <always|never|preserve>
-] }
-auto-format = true
-
+language-servers = ["rust-analyzer"]
+[language-server.rust-analyzer.config.check]
+command = "clippy"

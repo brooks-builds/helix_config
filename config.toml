@@ -17,6 +17,7 @@ snippets = false
 
 [editor.cursor-shape]
 insert = "bar"
+normal = "underline"
 
 [editor.file-picker]
 hidden = false
